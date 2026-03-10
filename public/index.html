@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- GDGoCBowen30DayChallenge Day 21 -->
+    <title>Dynamic Product List</title>
+  </head>
+  <body
+    class="min-h-screen font-['DM_Mono'] bg-gradient-to-r from-zinc-400 to-neutral-300 flex flex-col items-center gap-10"
+  >
+    <h1 class="font-bold text-3xl sm:text-4xl text-center uppercase pt-10">
+      Our available stock
+    </h1>
+    <input type="search" id="searchInput" class="px-6 py-3 w-[90%] outline-none border-2 border-zinc-600 rounded-2xl bg-neutral-300 font-bold" placeholder="Search a product by name...">
+    <div
+      class="buttonsContainer grid grid-cols-2 sm:grid-cols-3 md:flex md:justify-evenly gap-4 w-[90%]"
+    >
+      <button
+        class="filterBtn all py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>All</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Electronics</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Fitness</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Footwear</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Home</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Accessories</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Sports</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <button
+        class="filterBtn py-2 px-6 bg-neutral-900 text-white font-bold rounded-2xl hover:scale-105 active:scale-95 cursor-pointer flex justify-between gap-2 hover:opacity-85"
+      >
+        <span>Clothing</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 w-6 h-6 cursor-pointer hidden cancel"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+    <ul
+      id="productsContainer"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-10 transition-all duration-300 ease-in-out"
+    >
+      <p class="noResult text-red-600 font-bold text-xl hidden">There's no product with name that includes "<span class="query"></span>"</p>
+    </ul>
+    <div class="w-full flex justify-between px-20 font-bold text-2xl pb-10">
+      <p>Total price:</p>
+      <p class="totalPrice"></p>
+    </div>
+    <template class="productTemplate">
+      <li
+        class="product bg-zinc-800 p-8 text-white rounded-xl hover:scale-105 cursor-pointer flex flex-col gap-6 active:scale-95 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out justify-between"
+      >
+        <div>
+          <h2 class="productName text-2xl font-semibold"></h2>
+          <p class="productCategory text-gray-400 text-lg"></p>
+        </div>
+        <p
+          class="productPrice text-green-400 text-xl font-bold animate-pulse"
+        ></p>
+      </li>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
